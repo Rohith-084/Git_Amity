@@ -32,13 +32,12 @@ void merge(int a, int b, int d) {
   if(ra == rb && pot[a] - pot[b] != d) flaw++;
   else if(ra != rb) {
     pot[ra] = d + pot[b] - pot[a];
-    prec[ra] = rb;
   }
 }
 int main() {
-  int n;   //no. of variables
+  int n;   
   cin >> n;
-  int m;   // no. of equations
+  int m;   
   cin >> m;
   initialize(n);
   for(int i = 1; i <= m; ++i) { //consider 1-based indexing of variables
